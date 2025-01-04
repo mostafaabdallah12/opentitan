@@ -49,5 +49,16 @@
                    "-c-opts -I{build_dir}/src/{scramble_model_dir}",
                    "-ld-opts -lelf"]
     }
+    {
+      name: questa_memutil_dpi_scrambled_build_opts
+      build_opts: ["-ccflags -I{build_dir}/src/{memutil_dpi_src_dir}/cpp",
+                   "-ccflags -I{build_dir}/src/{memutil_dpi_scrambled_src_dir}/cpp",
+                   "-ccflags -I{build_dir}/src/{secded_enc_src_dir}",
+                   "-ccflags -I{build_dir}/src/{scramble_model_dir}",
+                   "-ccflags -I{build_dir}/src/{prince_ref_src_dir}",
+				   "-ldflags '-lelf'"]
+    }
+
+
   ]
 }

@@ -17,5 +17,11 @@
       name: xcelium_aes_model_build_opts
       build_opts: ["-I{build_dir}/src/{aes_model_src_dir}", "-lcrypto"]
     }
+
+    {
+      name: questa_aes_model_build_opts
+      build_opts: ["-ccflags -I{build_dir}/src/{aes_model_src_dir}", "-ldflags '-lcrypto'"]
+    }
+
   ]
 }

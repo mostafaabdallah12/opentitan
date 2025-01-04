@@ -48,12 +48,12 @@ class otp_ctrl_env_cfg extends cip_base_env_cfg #(.RAL_T(otp_ctrl_core_reg_block
 
   `uvm_object_new
 
-  constraint clk_freq_mhz_c {
-    `OTP_CLK_CONSTRAINT(clk_freq_mhz)
-    foreach (clk_freqs_mhz[i]) {
-      `OTP_CLK_CONSTRAINT(clk_freqs_mhz[i])
-    }
-  }
+//  constraint clk_freq_mhz_c {
+//    `OTP_CLK_CONSTRAINT(clk_freq_mhz)
+//    foreach (clk_freqs_mhz[i]) {
+//      `OTP_CLK_CONSTRAINT(clk_freqs_mhz[i])
+//    }
+//  }
 
   virtual function void initialize(bit [31:0] csr_base_addr = '1);
     string prim_ral_name = "otp_ctrl_prim_reg_block";

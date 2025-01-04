@@ -18,5 +18,10 @@
       name: xcelium_crypto_dpi_prince_build_opts
       build_opts: ["-I{build_dir}/src/{crypto_prince_ref_src_dir}"]
     }
+    {
+      name: questa_crypto_dpi_prince_build_opts
+      build_opts: ["-ccflags -I{build_dir}/src/{crypto_prince_ref_src_dir}"]
+    }
+
   ]
 }

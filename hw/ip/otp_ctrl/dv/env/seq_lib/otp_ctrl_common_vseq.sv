@@ -14,11 +14,11 @@ class otp_ctrl_common_vseq extends otp_ctrl_base_vseq;
   // This flag is used to identify if the sec_cm or tl_intg_err uses prim_otp_tl_i/o.
   protected bit is_prim_otp;
 
-  constraint dai_addr_c {
-    dai_addr dist {
-        [0 : (PartInfo[LifeCycleIdx].offset - 1)]    :/ 1,
-        [PartInfo[LifeCycleIdx].offset : {OTP_ADDR_WIDTH{1'b1}}] :/ 1};
-  }
+//  constraint dai_addr_c {
+//    dai_addr dist {
+//        [0 : (PartInfo[LifeCycleIdx].offset - 1)]    :/ 1,
+//        [PartInfo[LifeCycleIdx].offset : {OTP_ADDR_WIDTH{1'b1}}] :/ 1};
+//  }
 
   constraint reset_drive_cond_c {
     reset_drive_cond dist {

@@ -20,5 +20,10 @@
       name: dsim_otbn_tracer_build_opts
       build_opts: ["-c-opts -I{otbn_tracer_inc_dir}"]
     }
+	{
+      name: questa_otbn_tracer_build_opts
+      build_opts: ["-ccflags -I{otbn_tracer_inc_dir}"]
+    }
+
   ]
 }

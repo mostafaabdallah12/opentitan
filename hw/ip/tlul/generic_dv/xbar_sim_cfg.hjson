@@ -29,6 +29,8 @@
   vcs_cov_report_opts:  ["-excl_bypass_checks"]
   xcelium_cov_analyze_opts: []
   xcelium_cov_report_opts:  []
+  questa_cov_report_opts:  []
+  questa_cov_analyze_opts: []
 
   cov_analyze_opts: ["{{tool}_cov_analyze_opts}"]
   cov_report_opts: ["{{tool}_cov_report_opts}"]

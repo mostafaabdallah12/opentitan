@@ -17,5 +17,10 @@
       name: xcelium_dpi_build_opts
       build_opts: ["-I{build_dir}/src/{dpi_common_dir}", "-lutil"]
     }
+	{
+      name: questa_dpi_build_opts
+      build_opts: ["-ccflags -I{build_dir}/src/{dpi_common_dir}", "-ldflags '-lutil'"]
+    }
+
   ]
 }

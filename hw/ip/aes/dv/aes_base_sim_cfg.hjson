@@ -93,7 +93,7 @@
   ]
 
   // Enable cdc instrumentation.
-  run_opts: ["+uvm_set_verbosity={component_a},{id_a},{verbosity_a},{phase_a}",
+  run_opts: ["+uvm_set_verbosity={component_a},{id_a},{verbosity_a},{phase_a}", "-ldflags '-lcrypto'",
              "+cdc_instrumentation_enabled=1"
   ]
 

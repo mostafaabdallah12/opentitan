@@ -41,6 +41,11 @@
       name: xcelium_disable_cg_mode
       run_opts: []
     }
+    // Questa does not support the -covg_disable_cg flag
+    {
+      name: questa_disable_cg_mode
+      run_opts: []
+    }
     {
       name: disable_cg_mode
       en_run_modes: ["{tool}_disable_cg_mode"]

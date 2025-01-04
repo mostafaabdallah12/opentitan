@@ -833,8 +833,11 @@ interface entropy_src_cov_if
   // Several instances are then created for a targetted handful of window sizes.
   //
 
-  function automatic unsigned sigma_to_int(real sigma);
-    return unsigned'($rtoi($floor(sigma/sigma_res)));
+  function unsigned sigma_to_int(real sigma);
+	int int_result;
+	real result = sigma / sigma_res;
+	int_result = (result >= 0) ? int'(result) : int'(result) - 1;
+    return unsigned'(int_result) ;
   endfunction
 
   covergroup win_ht_deep_threshold_cg()

@@ -209,7 +209,7 @@ class keymgr_scoreboard extends cip_base_scoreboard #(
              current_internal_key[current_cdi], current_state.name, current_cdi.name), UVM_MEDIUM)
       end
       UpdateSwOut: begin
-        if (!get_fault_err) begin
+        if (!get_fault_err()) begin
           bit [keymgr_pkg::Shares-1:0][DIGEST_SHARE_WORD_NUM-1:0][TL_DW-1:0] sw_share_output;
           // digest is 384 bits wide while SW output is only 256, need to truncate it
           sw_share_output = {item.rsp_digest_share1[keymgr_pkg::KeyWidth-1:0],
@@ -293,9 +293,9 @@ class keymgr_scoreboard extends cip_base_scoreboard #(
       if (cfg.en_cov && cfg.keymgr_vif.get_keymgr_en()) begin
         compare_op_e key_version_cmp;
 
-        if (`gmv(ral.key_version[0]) > get_current_max_version) begin
+        if (`gmv(ral.key_version[0]) > get_current_max_version()) begin
           key_version_cmp = CompareOpGt;
-        end else if (`gmv(ral.key_version[0]) == get_current_max_version) begin
+        end else if (`gmv(ral.key_version[0]) == get_current_max_version()) begin
           key_version_cmp = CompareOpEq;
         end else begin
           key_version_cmp = CompareOpLt;

@@ -25,6 +25,7 @@ class kmac_edn_timeout_error_vseq extends kmac_app_vseq;
   function void pre_randomize();
     this.disable_err_c.constraint_mode(0);
     this.en_app_c.constraint_mode(0);
+    if (cfg == null) set_handles();
   endfunction
 
   virtual task pre_start();

@@ -25,5 +25,12 @@
       name: dsim_otbn_memutil_build_opts
       build_opts: ["-c-opts -I{build_dir}/src/{otbn_memutil_src_dir}"]
     }
+
+    {
+      name: questa_otbn_memutil_build_opts
+      build_opts: ["-ccflags -I{build_dir}/src/{otbn_memutil_src_dir}"]
+    }
+
+
   ]
 }
